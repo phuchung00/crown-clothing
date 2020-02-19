@@ -3,14 +3,14 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 const config = {
-    apiKey: "AIzaSyBydwnLQnQ6F-EuRf2UUNMnzANeiUEIKbI",
-    authDomain: "crown-clothing-b248c.firebaseapp.com",
-    databaseURL: "https://crown-clothing-b248c.firebaseio.com",
-    projectId: "crown-clothing-b248c",
-    storageBucket: "crown-clothing-b248c.appspot.com",
-    messagingSenderId: "227157923598",
-    appId: "1:227157923598:web:7c7f7bf487c90c787a295f",
-    measurementId: "G-R5TFVBJW6Z"
+    apiKey: "AIzaSyC_C-IpI0B-2G4gXcboaBGxN6m--vqXMuw",
+    authDomain: "crwn-clothing-75389.firebaseapp.com",
+    databaseURL: "https://crwn-clothing-75389.firebaseio.com",
+    projectId: "crwn-clothing-75389",
+    storageBucket: "crwn-clothing-75389.appspot.com",
+    messagingSenderId: "992310532798",
+    appId: "1:992310532798:web:32320a18d7684d91eb1cef",
+    measurementId: "G-B9PQB7DN0J"
 }
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -23,7 +23,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     if(!snapShot.exists){
         const { displayName, email } =  userAuth
         const createdAt = new Date()
-
         try{
             await userRef.set({
                 displayName,
